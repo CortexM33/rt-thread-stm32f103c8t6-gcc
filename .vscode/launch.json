@@ -1,0 +1,21 @@
+{
+    /* OpenOCD Local Debugger */
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/movebase.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            ////"runToEntryPoint": "main",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "svdFile":"STM32F103.svd",
+            ////"preLaunchTask": "program->stm32"
+        }
+    ]
+}
